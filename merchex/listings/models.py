@@ -19,3 +19,12 @@ class Band(models.Model):
 
     def __str__(self):
         return f'{self.name}'
+
+
+class Article(models.Model):
+    title = models.fields.CharField(max_length=100)
+    description = models.fields.CharField(max_length=1000)
+    band = models.ForeignKey(Band, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'{self.title}'
