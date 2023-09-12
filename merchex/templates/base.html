@@ -1,5 +1,9 @@
+{% load static %}
 <html>
-    <head><title>Merchex</title></head>
+    <head>
+        <title>Merchex</title>
+        <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+    </head>
     <body>
 
         {% block content %}{% endblock %}
